@@ -35,6 +35,24 @@ class RecipeListFragment : Fragment() {
 
         return ComposeView(requireContext()).apply {
             setContent {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "Recipe List",
+                        fontSize = 21.sp)
+                    Spacer(modifier = Modifier.padding(10.dp))
+                    Button(onClick = {
+                        findNavController().navigate(R.id.viewRecipe)
+                    }) {
+                        Text(text = "To Recipe Fragment")
+
+                        }
+                    }
+            }
+        }
+
+
+
+    /*    return ComposeView(requireContext()).apply {
+            setContent {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
                         text = "Recipe List",
@@ -51,7 +69,7 @@ class RecipeListFragment : Fragment() {
                     
                 }
             }
-        }
+        }*/
 
 
 
